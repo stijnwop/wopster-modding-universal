@@ -14,12 +14,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "./app-routing.module";
 import {ControlBroadcastComponent} from "./services/control-broadcast.component";
 import {ServiceWorkerModule} from "@angular/service-worker";
+import {NavigationService} from "./navigation/navigation.service";
+import {TopMenuComponent} from "./layout/top-menu/top-menu.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         StickyDirective,
         ControlBroadcastComponent,
+        TopMenuComponent
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'wopster-modding'}),
@@ -40,6 +43,8 @@ import {ServiceWorkerModule} from "@angular/service-worker";
     entryComponents: [
     ],
     providers: [
+        NavigationService,
+
         WindowRef
     ],
     bootstrap: [AppComponent]
