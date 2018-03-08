@@ -1,0 +1,65 @@
+{
+  "name": "wopster-modding-platform",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/universal-starter.git"
+  },
+  "contributors": [
+    "Stijn Wopereis"
+  ],
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build-i18n:de": "ng build --aot --prod --output-path=dist/browser/de --bh /de/ --locale=de --i18n-format=xtb --i18n-file src/i18n/messages.de.xtb && ng build --prod --app 1 --output-hashing=false",
+    "build-i18n:en": "ng build --aot --prod --output-path=dist/browser --locale=en && ng build --prod --app 1 --output-hashing=false",
+    "build-i18n": "npm run build-i18n:en && npm run build-i18n:de",
+    "rebuild-i18n": "./node_modules/.bin/ng-xi18n --i18nFormat=xlf -p src/tsconfig.app.json",
+    "i18n": "ng-xi18n -p src/tsconfig.app.json --i18nFormat=xmb",
+    "build:client-and-server-bundles": "ng build --prod --aot && ng build --prod --aot --app universal --output-hashing=false",
+    "build:prerender": "npm run build:client-and-server-bundles s&& npm run webpack:server && npm run generate:prerender",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+    "generate:prerender": "cd dist && node prerender",
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+    "serve:prerender": "cd dist/browser && http-server",
+    "serve:ssr": "node dist/server"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^5.0.3",
+    "@angular/cdk": "^5.0.0-rc.2",
+    "@angular/common": "^5.0.3",
+    "@angular/compiler": "^5.0.3",
+    "@angular/core": "^5.0.3",
+    "@angular/forms": "^5.0.3",
+    "@angular/http": "^5.0.3",
+    "@angular/material": "^5.0.0-rc.2",
+    "@angular/platform-browser": "^5.0.3",
+    "@angular/platform-browser-dynamic": "^5.0.3",
+    "@angular/platform-server": "^5.0.3",
+    "@angular/router": "^5.0.3",
+    "@angular/service-worker": "^5.0.0",
+    "@ngu/carousel": "^1.3.5",
+    "@nguniversal/express-engine": "^5.0.0-beta.5",
+    "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.5",
+    "core-js": "^2.4.1",
+    "hammerjs": "^2.0.8",
+    "node-env-file": "^0.1.8",
+    "rxjs": "^5.5.2",
+    "zone.js": "^0.8.14"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.6.0-rc.0",
+    "@angular/compiler-cli": "^5.0.3",
+    "@angular/language-service": "^5.0.3",
+    "@types/node": "^8.0.30",
+    "cpy-cli": "^1.0.1",
+    "express": "^4.15.2",
+    "http-server": "^0.10.0",
+    "reflect-metadata": "^0.1.10",
+    "ts-loader": "^2.3.7",
+    "typescript": "~2.4.2"
+  }
+}
