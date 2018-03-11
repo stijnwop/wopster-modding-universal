@@ -1,0 +1,8 @@
+// import global themes
+@import '~@angular/material/theming';
+@import './wio-theme';
+@import './variables';
+
+// import directories
+@import './base/base-dir';
+@import './layout/layout-dir';
