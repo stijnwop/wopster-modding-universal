@@ -1,9 +1,17 @@
+<div id="top-of-page"></div>
+
 <mat-toolbar class="header">
     <mat-toolbar-row>
-        <span>Wopster</span>
-        <span class="primary-color">Modding</span>
+        <a href="/">
+            <span>Wopster</span>
+            <span class="primary-color">Modding</span>
+        </a>
         <wio-top-menu [nodes]="topMenuNodes"></wio-top-menu>
     </mat-toolbar-row>
 </mat-toolbar>
-<section>
-</section>
+
+<mat-sidenav-container class="sidenav-container" role="main">
+    <section style="background-color:#b8d3e6;height: 150px">
+        Test section
+    </section>
+</mat-sidenav-container>

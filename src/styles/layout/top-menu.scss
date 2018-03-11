@@ -41,3 +41,21 @@ wio-top-menu {
     }
   }
 }
+
+mat-toolbar.mat-toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.30);
+  background-color: $white;
+
+  mat-toolbar-row {
+    height: 80px;
+  }
+
+  mat-icon {
+    color: $white;
+  }
+}
