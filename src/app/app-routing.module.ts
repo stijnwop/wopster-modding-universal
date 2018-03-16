@@ -11,6 +11,10 @@ const routes: Routes = [
         loadChildren: './home/home.module#HomeModule'
     },
     {
+        path: 'projects',
+        loadChildren: './elements/project/project.module#ProjectModule'
+    },
+    {
         path: '**', redirectTo: '', pathMatch: 'full'
     }
 ];

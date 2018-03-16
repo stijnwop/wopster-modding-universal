@@ -5,7 +5,7 @@ import {NavigationNode} from "../../navigation/navigation.model";
     selector: 'wio-top-menu',
     template: `
         <ul role="navigation">
-            <li *ngFor="let node of nodes"><a class="nav-link" [href]="node.url" [title]="node.title">{{ node.title
+            <li *ngFor="let node of nodes"><a class="nav-link" [routerLink]="node.url" [title]="node.title">{{ node.title
                 }}</a></li>
         </ul>`
 })

@@ -91,10 +91,21 @@ a {
 .app-toolbar a {
   font-size: 16px;
   font-weight: 400;
-  color: white;
+  color: $black;
   font-family: $main-font;
   text-transform: uppercase;
-  padding: 21px 0;
+  padding: 25px 0;
+
+  span {
+    letter-spacing: 0;
+    font-size: 20px;
+
+    &.sub {
+      font-weight: 500;
+      color: $base-color;
+      font-size: 18px;
+    }
+  }
 }
 
 strong {
@@ -145,10 +156,6 @@ p > code, li > code, td > code, th > code {
 code {
   font-family: $code-font;
   font-size: 90%;
-}
-
-.primary-color {
-  color: $base-color
 }
 
 .mat-toolbar .action-button {
