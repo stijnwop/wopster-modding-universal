@@ -6,11 +6,11 @@
  */
 
 import {Routes} from "@angular/router";
-import {ProjectListComponent} from "./project-list.component";
+import {ProjectPageComponent} from "./project-page.component";
 
 export const routesProject: Routes = [
     {
         path: '',
-        component: ProjectListComponent
+        component: ProjectPageComponent
     }
 ];

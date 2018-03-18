@@ -9,6 +9,7 @@ import {NgModule} from "@angular/core";
 import {RouterModule} from "@angular/router";
 import {routesProject} from "./project-routing.module";
 import {SharedModule} from "../../shared.module";
+import {ProjectPageComponent} from "./project-page.component";
 import {ProjectListComponent} from "./project-list.component";
 
 @NgModule({
@@ -16,7 +17,7 @@ import {ProjectListComponent} from "./project-list.component";
         RouterModule.forChild(routesProject),
         SharedModule
     ],
-    declarations: [ProjectListComponent]
+    declarations: [ProjectPageComponent, ProjectListComponent]
 })
 export class ProjectModule {
 }

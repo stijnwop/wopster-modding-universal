@@ -44,7 +44,6 @@ import {TopMenuComponent} from "./layout/top-menu/top-menu.component";
     ],
     providers: [
         NavigationService,
-
         WindowRef
     ],
     bootstrap: [AppComponent]
