@@ -7,6 +7,10 @@ import {Routes, RouterModule} from '@angular/router';
 
 const routes: Routes = [
     {
+        path: '',
+        loadChildren: './elements/home/home.module#HomeModule'
+    },
+    {
         path: 'projects',
         loadChildren: './elements/project/project.module#ProjectModule'
     },

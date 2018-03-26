@@ -3,7 +3,7 @@
  */
 
 import {NgModule} from "@angular/core";
-import {MatButtonModule, MatCardModule} from "@angular/material";
+import {MatButtonModule, MatCardModule, MatInputModule, MatToolbarModule} from "@angular/material";
 import {CommonModule} from "@angular/common";
 import {NguCarouselModule} from "@ngu/carousel";
 
@@ -14,12 +14,14 @@ import {NguCarouselModule} from "@ngu/carousel";
         CommonModule,
         MatCardModule,
         MatButtonModule,
+        MatInputModule,
         NguCarouselModule
     ],
     exports: [
         CommonModule,
         MatCardModule,
         MatButtonModule,
+        MatInputModule,
         NguCarouselModule
     ],
     entryComponents: [

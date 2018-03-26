@@ -12,7 +12,7 @@ import {NguCarousel} from "@ngu/carousel";
 @Component({
     selector: 'wio-carousel',
     template: `
-        <ngu-carousel [inputs]="carouselOne">
+        <ngu-carousel [inputs]="carouselInputs">
             <ngu-item NguCarouselItem *ngFor="let node of nodes">
                 <div>
                     {{node}}
@@ -26,7 +26,7 @@ import {NguCarousel} from "@ngu/carousel";
 export class CarouselComponent {
     @Input() nodes: CarouselModel[];
 
-    protected carouselOne: NguCarousel = {
+    protected carouselInputs: NguCarousel = {
         grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
         slide: 4,
         speed: 500,
