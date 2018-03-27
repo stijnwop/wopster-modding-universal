@@ -12,7 +12,7 @@ import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class NewsService {
 
-    private readonly baseEndPoint = 'api/generic/news';
+    private readonly baseEndPoint = 'assets/news';
 
     constructor(private _logger: Logger, private _httpClient: HttpClient) {
     }
@@ -22,7 +22,7 @@ export class NewsService {
      * @returns {Promise<NewsNode[]>}
      */
     public async getNewsNodes(): Promise<NewsNode[]> {
-        const endpointUrl = this.baseEndPoint;
+        const endpointUrl = this.baseEndPoint + ".json";
 
         try {
             return await this._httpClient.get<NewsNode[]>(endpointUrl).toPromise();
