@@ -1,0 +1,16 @@
+<div class="grid-fluid">
+    <div class="footer-block" *ngFor="let node of nodes">
+        <h3>{{node.title}}</h3>
+        <ul>
+            <li *ngFor="let item of node.children">
+                <a class="link" [href]="item.url"
+                   [title]="item.tooltip || item.title">{{ item.title }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p>
+    Powered by Wopster ©2017 - 2018.
+    Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</p>

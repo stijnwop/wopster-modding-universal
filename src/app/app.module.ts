@@ -16,13 +16,15 @@ import {ControlBroadcastComponent} from "./services/control-broadcast.component"
 import {ServiceWorkerModule} from "@angular/service-worker";
 import {NavigationService} from "./navigation/navigation.service";
 import {TopMenuComponent} from "./layout/top-menu/top-menu.component";
+import {FooterComponent} from "./layout/footer/footer.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         StickyDirective,
         ControlBroadcastComponent,
-        TopMenuComponent
+        TopMenuComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'wopster-modding'}),

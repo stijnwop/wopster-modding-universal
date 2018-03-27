@@ -12,5 +12,50 @@
       "url": "tutorials",
       "title": "tutorials"
     }
+  ],
+  "Footer": [
+    {
+      "title": "Navigation",
+      "children": [
+        {
+          "url": "projects",
+          "title": "Projects"
+        },
+        {
+          "url": "databank",
+          "title": "Databank"
+        },
+        {
+          "url": "tutorials",
+          "title": "Tutorials"
+        }
+      ]
+    },
+    {
+      "title": "Community",
+      "children": [
+        {
+          "url": "projects",
+          "title": "Facebook"
+        },
+        {
+          "url": "databank",
+          "title": "Github"
+        },
+        {
+          "url": "databank",
+          "title": "Modhub"
+        }
+      ]
+    },
+    {
+      "title": "Support",
+      "children": [
+        {
+          "url": "projects",
+          "title": "Report issues"
+        }
+      ]
+    }
   ]
 }

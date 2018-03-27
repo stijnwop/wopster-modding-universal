@@ -10,6 +10,7 @@ import {NavigationService} from "./navigation/navigation.service";
 export class AppComponent implements OnInit {
 
     topMenuNodes: NavigationNode[];
+    footerNodes: NavigationNode[];
 
     constructor(@Inject(PLATFORM_ID) private platform_id: any,
                 @Inject(LOCALE_ID) protected localeId: string,
@@ -19,7 +20,8 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.navigationService.navigationViews.subscribe(views => {
-            this.topMenuNodes = views['TopBar']  || [];
+            this.topMenuNodes = views['TopBar'] || [];
+            this.footerNodes = views['Footer'] || [];
         });
     }
 }
