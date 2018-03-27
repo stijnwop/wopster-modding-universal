@@ -3,7 +3,7 @@
         <h3>{{node.title}}</h3>
         <ul>
             <li *ngFor="let item of node.children">
-                <a class="link" [href]="item.url"
+                <a class="link" target="{{item.blank ? '_blank' : '_self'}}" [href]="item.url"
                    [title]="item.tooltip || item.title">{{ item.title }}</a>
             </li>
         </ul>

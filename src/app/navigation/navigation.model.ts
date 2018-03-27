@@ -3,6 +3,7 @@ export interface NavigationNode {
     title?: string;
     tooltip?: string;
     hidden?: boolean;
+    blank?: boolean;
     children?: NavigationNode[];
 }
 

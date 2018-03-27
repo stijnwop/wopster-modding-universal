@@ -5,8 +5,8 @@
       "title": "projects"
     },
     {
-      "url": "databank",
-      "title": "databank"
+      "url": "hub",
+      "title": "hub"
     },
     {
       "url": "tutorials",
@@ -22,8 +22,8 @@
           "title": "Projects"
         },
         {
-          "url": "databank",
-          "title": "Databank"
+          "url": "hub",
+          "title": "Hub"
         },
         {
           "url": "tutorials",
@@ -40,11 +40,16 @@
         },
         {
           "url": "databank",
-          "title": "Github"
+          "title": "GitHub"
+        },
+        {
+          "url": "https://discord.gg/QsheKk9",
+          "blank": true,
+          "title": "Discord"
         },
         {
           "url": "databank",
-          "title": "Modhub"
+          "title": "ModHub"
         }
       ]
     },
