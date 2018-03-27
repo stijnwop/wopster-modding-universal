@@ -53,3 +53,18 @@ body {
 article {
   padding: 0 3rem;
 }
+
+article mat-paginator {
+  margin-top: 25px;
+}
+
+
+.mat-tab-label {
+  width: 50%;
+
+  &:focus, &.mat-tab-label-active {
+    i {
+      color: $base-color;
+    }
+  }
+}

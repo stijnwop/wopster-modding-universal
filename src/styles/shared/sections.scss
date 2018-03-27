@@ -1,0 +1,39 @@
+.section {
+  margin-top: 75px;
+}
+
+.section-sub {
+  background-color: $backgroundgray;
+}
+
+.section-primary {
+  background-color: $offwhite;
+}
+
+.news-home-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  min-height: 80px;
+  height: 10vh;
+  max-height: 560px;
+  box-sizing: border-box;
+  padding: 48px 48px 32px 48px;
+  overflow: hidden;
+  -webkit-transform: skewY(-1.5deg);
+  transform: skewY(-1.5deg);
+  -webkit-transform-origin: 0;
+  transform-origin: 0;
+}

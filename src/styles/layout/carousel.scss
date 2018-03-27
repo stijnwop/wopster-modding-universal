@@ -1,0 +1,76 @@
+div.carousel-ngu-item {
+  background-size: cover !important;
+  height: 475px;
+}
+
+div.carousel-ngu-item-small {
+  width: 50%;
+}
+
+div.carousel-ngu-item img {
+  height: 200px;
+}
+
+.leftRs, .rightRs {
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  height: 50px;
+  color: $white;
+}
+
+.leftRs i, .rightRs i {
+  font-size: 55px;
+  font-weight: bold;
+  opacity: .75;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.leftRs:hover i, .rightRs:hover i {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.1);
+
+}
+
+.leftRs {
+  left: 0;
+}
+
+.rightRs {
+  right: 0;
+}
+
+.carousel-ngu-item .carousel-ngu-item-inner {
+  margin: 0;
+  padding: 10%;
+}
+
+.carousel-ngu-item .carousel-ngu-item-inner h1 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.carousel-ngu-item .carousel-ngu-item-inner span {
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+.carousel-ngu-item .carousel-ngu-item-inner a {
+  span {
+    text-decoration: none;
+    color: $base-color;
+  }
+
+  color: $black;
+  transition: all .2s ease-in-out;
+}
+
+.carousel-ngu-item .carousel-ngu-item-inner a:hover {
+  color: #060606;
+  transform: scale(1.1);
+}
