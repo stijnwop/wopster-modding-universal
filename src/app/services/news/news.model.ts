@@ -12,6 +12,6 @@ export interface NewsNode {
     title: string;
     content: string;
     author: string;
-    created: any;
+    created: Date;
     images: ImageModel[]
 }
