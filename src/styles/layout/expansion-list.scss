@@ -1,0 +1,46 @@
+mat-expansion-panel {
+
+  &.mat-expansion-panel, .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+  }
+
+  mat-panel-title {
+    text-transform: uppercase;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+        background-color: $offwhite;
+      }
+
+      &:focus {
+        background-color: $accentblue;
+        outline: none;
+      }
+    }
+  }
+
+  a.link {
+    margin: 0;
+    padding: 28px 5px;
+    line-height: 28px;
+    cursor: pointer;
+
+    &:focus {
+      background: rgba($white, 0.15);
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+}
