@@ -1,0 +1,13 @@
+mat-vertical-stepper {
+
+  mat-step-header {
+    &.mat-vertical-stepper-header{
+
+      padding: 12px 24px;
+    }
+
+    .mat-step-label {
+      font-size: 12px;
+    }
+  }
+}
