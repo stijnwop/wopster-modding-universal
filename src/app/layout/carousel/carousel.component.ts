@@ -6,16 +6,25 @@
  */
 
 import {Component, Input} from '@angular/core';
-import {CarouselModel} from "../../services/domain/carousel.model";
 import {NguCarousel} from "@ngu/carousel";
+import {CarouselNode} from "../../services/domain/carousel.model";
 
 @Component({
     selector: 'wio-carousel',
     template: `
         <ngu-carousel [inputs]="carouselInputs">
             <ngu-item NguCarouselItem *ngFor="let node of nodes">
-                <div>
-                    {{node}}
+                <div class="carousel-ngu-item" [style.background-image]="'url(' + node.path + ')'">
+                    <div class="carousel-ngu-item-inner">
+                        <div class="carousel-ngu-item-small">
+                            <h1>{{node.title}}</h1>
+                            <p>{{node.description}}</p>
+                            <a mat-raised-button target="{{node.blank ? '_blank' : '_self'}}" [href]="node.actionLink">{{node.actionText}}</a>
+                            <span class="clearfix" *ngIf="node.optionalActionLink && node.optionalActionText">
+                                <a target="_blank" [href]="node.optionalActionLink">{{node.optionalActionText}}</a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </ngu-item>
             <a NguCarouselPrev class="leftRs"><i class="material-icons">navigate_before</i></a>
@@ -24,7 +33,7 @@ import {NguCarousel} from "@ngu/carousel";
     `
 })
 export class CarouselComponent {
-    @Input() nodes: CarouselModel[];
+    @Input() nodes: CarouselNode[];
 
     protected carouselInputs: NguCarousel = {
         grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},

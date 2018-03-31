@@ -11,6 +11,9 @@ import {HomePageComponent} from "./home-page.component";
 export const routesHome: Routes = [
     {
         path: '',
-        component: HomePageComponent
+        component: HomePageComponent,
+        data: {
+            useStick: true
+        }
     }
 ];
