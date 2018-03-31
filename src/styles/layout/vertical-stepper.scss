@@ -1,5 +1,14 @@
-mat-vertical-stepper {
+wio-stepper {
+  width: 18%;
+  position: fixed;
+  top: 76px;
+  right: 0;
+  bottom: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
+mat-vertical-stepper {
   mat-step-header {
     &.mat-vertical-stepper-header{
 

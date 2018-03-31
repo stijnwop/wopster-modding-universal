@@ -1,6 +1,7 @@
 div.carousel-ngu-item {
-  background-size: cover !important;
-  height: 475px;
+  background-size: contain;
+  background: no-repeat center;
+  min-height: 475px;
 }
 
 div.carousel-ngu-item-small {

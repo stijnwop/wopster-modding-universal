@@ -1,7 +1,11 @@
-.section {
-  margin-top: 75px;
-}
+$margin: 75px;
 
+.section {
+  margin-top: $margin;
+}
+.section-last {
+  margin-bottom: $margin;
+}
 .section-sub {
   background-color: $backgroundgray;
 }

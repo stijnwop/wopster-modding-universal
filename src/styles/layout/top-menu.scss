@@ -63,3 +63,41 @@ mat-toolbar.mat-toolbar {
     background-color: $white;
   }
 }
+
+wio-search-input.top-menu-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-width: 150px;
+  height: 100%;
+
+  input {
+    color: $darkgray;
+    border: none;
+    border-radius: 100px;
+    background-color: $offwhite;
+    padding: 5px 16px;
+    margin-left: 8px;
+    width: 180px;
+    max-width: 240px;
+    height: 50%;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width: 1000px) {
+      transition: width 0.4s ease-in-out;
+
+      &:focus {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      width: 150px;
+    }
+  }
+}
