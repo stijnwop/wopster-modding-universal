@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
-import {NavigationViews} from "./navigation.model";
+import {NavigationStepViews, NavigationViews} from "./navigation.model";
 import {HttpClient} from "@angular/common/http";
 import 'rxjs/add/operator/map'
 
@@ -11,10 +11,12 @@ const NAVIGATION_PATH = "/assets/navigation.json";
 export class NavigationService {
 
     navigationViews: Observable<NavigationViews>;
+    navigationStepViews: Observable<NavigationStepViews>;
 
     constructor(private http: HttpClient) {
         const navigationInfo = this.fetchNavigationInfo();
         this.navigationViews = this.getNavigationViews(navigationInfo);
+        this.navigationStepViews = this.getNavigationSteps(navigationInfo);
     }
 
     private fetchNavigationInfo(): Observable<any> {
@@ -30,6 +32,18 @@ export class NavigationService {
                 }
             });
             return views as NavigationViews;
+        });
+    }
+
+    private getNavigationSteps(navigationInfo: Observable<any>): Observable<NavigationStepViews> {
+        return navigationInfo.map(response => {
+            const views = Object.assign({}, response);
+            Object.keys(views).forEach(key => {
+                if (key[0] === '_') {
+                    delete views[key];
+                }
+            });
+            return views as NavigationStepViews;
         });
     }
 }

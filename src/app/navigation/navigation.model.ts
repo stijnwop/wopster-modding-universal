@@ -8,6 +8,15 @@ export interface NavigationNode {
     children?: NavigationNode[];
 }
 
+export interface NavigationStepNode {
+    id?: string;
+    title?: string;
+}
+
+export interface NavigationStepViews {
+    [name: string]: NavigationStepNode[];
+}
+
 export interface NavigationViews {
     [name: string]: NavigationNode[];
 }
