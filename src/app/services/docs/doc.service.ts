@@ -39,7 +39,9 @@ export class DocService implements OnDestroy {
         // Listen to route change
         this.router.events.subscribe((event) => {
             if (event instanceof NavigationStart) {
-                this._urlSubject.next(event.url || '');
+                if (event.url.startsWith("/docs")) {
+                    this._urlSubject.next(event.url || '');
+                }
             }
         });
 
@@ -89,7 +91,7 @@ export class DocService implements OnDestroy {
      */
     private fetchDoc(id: string): Observable<Doc> {
         if (id == "docs") {
-            id = "index" // get index doc
+            id = "index"; // get index doc
         }
 
         const requestPath = `${CONTENT_URL_PREFIX}${id}.json`;
@@ -105,7 +107,11 @@ export class DocService implements OnDestroy {
                         this.logger.log('received invalid data:', data);
                         throw Error('Invalid data');
                     }
-                })
+                }),
+                // Todo: catch error and return not found page/message
+                // catchError((error: HttpErrorResponse) => {
+                //     return
+                // })
             )
             .subscribe(subject);
 
